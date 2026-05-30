@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ffmpeg.wasm — transcode video in the browser</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ffmpeg, running in your browser</h1>
+      <p class="sub">
+        The real FFmpeg — a large C codebase — compiled to WebAssembly. The video
+        never leaves your machine: it's transcoded entirely client-side. No
+        upload, no server, no install.
+      </p>
+
+      <div class="row">
+        <input id="file" type="file" accept="video/*" />
+        <button id="run" disabled>Convert to MP4 (H.264)</button>
+      </div>
+
+      <p id="status" class="status">Loading the ffmpeg core…</p>
+      <progress id="progress" value="0" max="1" hidden></progress>
+
+      <div class="videos">
+        <figure>
+          <figcaption>Input</figcaption>
+          <video id="in" controls></video>
+        </figure>
+        <figure>
+          <figcaption>Output (MP4 from ffmpeg.wasm)</figcaption>
+          <video id="out" controls></video>
+        </figure>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

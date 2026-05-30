@@ -1,0 +1,7 @@
+# allowBuilds is read by the supply-chain pnpm plugin; let esbuild (a Vite
+# dep) run its postinstall. NOTE: do NOT run `pnpm approve-builds` — it corrupts
+# this value to a placeholder and breaks `pnpm install`.
+allowBuilds:
+  esbuild: true
+# 10080 minutes = 7 days minimum package age (supply-chain hardening).
+minimumReleaseAge: 10080
