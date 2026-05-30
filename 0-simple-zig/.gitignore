@@ -1,0 +1,4 @@
+simple.wasm
+simple.wasm.o
+zig-cache/
+.zig-cache/

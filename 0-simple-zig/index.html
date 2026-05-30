@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zig → WebAssembly, hand-wired</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Zig → WebAssembly</h1>
+
+      <section>
+        <h2>Scalar call</h2>
+        <p>JS passes two numbers into the module and gets one back.</p>
+        <div class="row">
+          <input id="a" type="number" value="2" />
+          <span>+</span>
+          <input id="b" type="number" value="3" />
+          <button id="add">add()</button>
+          <output id="addOut">—</output>
+        </div>
+      </section>
+
+      <section>
+        <h2>Shared linear memory</h2>
+        <p>
+          JS writes bytes into the module's memory, then asks it to sum them.
+          Host and module see the same flat block of memory.
+        </p>
+        <div class="row">
+          <input id="bytes" type="text" value="1, 2, 3, 4, 5" />
+          <button id="sum">sum()</button>
+          <output id="sumOut">—</output>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macroquad — same Rust, desktop & web</title>
+    <style>
+      html,
+      body,
+      canvas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Macroquad draws into this canvas. -->
+    <canvas id="glcanvas" tabindex="1"></canvas>
+
+    <!-- The macroquad/miniquad JS bootstrap is generic, not generated per-project. -->
+    <script src="./mq_js_bundle.js"></script>
+    <script>
+      load("./macroquad-demo.wasm");
+    </script>
+  </body>
+</html>

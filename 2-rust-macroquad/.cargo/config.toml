@@ -1,0 +1,5 @@
+# macroquad's GL functions (glTexImage2D, …) aren't statically linked — the
+# macroquad JS bootstrap supplies them as imports when the module instantiates.
+# rust-lld rejects undefined symbols by default, so allow them for the web build.
+[target.wasm32-unknown-unknown]
+rustflags = ["-C", "link-arg=--allow-undefined"]
