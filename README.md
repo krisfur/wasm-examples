@@ -15,7 +15,7 @@ Insert excalidraw link.
   - Pure scalar math is **not** a win; JS's JIT is already excellent at it.
 - **Where it wins on capability:** run an existing native library or whole program client-side — no server round-trip, no install, cross-platform.
 
-## The demos
+## Demos
 
 | Folder | Language | Toolchain |
 | --- | --- | --- |
@@ -54,5 +54,5 @@ cd 2-rust-macroquad && cargo run
 web:
 
 ```bash
-cd 2-rust-macroquat && bash build-web.sh && npx serve
+cd 2-rust-macroquad && bash build-web.sh && npx serve
 ```
