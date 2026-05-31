@@ -4,16 +4,7 @@ Demos for a video about WebAssembly.
 
 ## Whiteboard: when WASM is the right tool
 
-Insert excalidraw link.
-
-- **It's a compile target, not a framework:** You write in another language and compile to a `.wasm` module the browser runs in a sandbox. JavaScript calls into it: the two share one flat block of linear memory.
-- **It can't touch the DOM:** Every DOM/Web API call goes through JS glue, so WASM is no faster for UI. The DOM is the bottleneck for everyone.
-- **Where it actually wins on speed (the niche):**
-  - **Memory-bound:** byte work (image/audio pixels, parsing) - direct linear memory beats bounds-checked typed arrays.
-  - **SIMD:** WASM has 128-bit SIMD; JS has no portable explicit SIMD.
-  - **No GC / predictable latency:** no garbage-collector pauses in a hot loop.
-  - Pure scalar math is **not** a win; JS's JIT is already excellent at it.
-- **Where it wins on capability:** run an existing native library or whole program client-side — no server round-trip, no install, cross-platform.
+[Excalidraw link](https://excalidraw.com/#json=RgzU6HNXSu2EqqOtmPE_y,UXElX7CLSqeVRVGOmYkOPw).
 
 ## Demos
 
