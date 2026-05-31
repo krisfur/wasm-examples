@@ -1,4 +1,4 @@
-// A freestanding WebAssembly module — no std, no runtime, no glue.
+// A freestanding WebAssembly module.
 // Each `export fn` becomes a function the JavaScript host can call directly.
 
 // Scalar in, scalar out:

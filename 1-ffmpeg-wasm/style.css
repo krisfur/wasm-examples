@@ -4,87 +4,28 @@
 }
 
 body {
-  margin: 0;
-  background: #0b0b0f;
-  color: #e7e7ea;
-}
-
-main {
   max-width: 880px;
   margin: 0 auto;
   padding: 32px 20px;
+  background: #000;
+  color: #fff;
 }
 
-h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.sub {
-  color: #9a9aa5;
-  font-size: 14px;
-  margin: 6px 0 24px;
-  max-width: 60ch;
-}
-
-.row {
+.row,
+.videos {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
   flex-wrap: wrap;
 }
 
-button {
-  background: #6d5efc;
-  color: #fff;
-  border: 0;
-  border-radius: 8px;
-  padding: 9px 16px;
-  font: inherit;
-  cursor: pointer;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.status {
-  color: #9a9aa5;
-  font-size: 13px;
-  margin: 14px 0 6px;
-}
-
-progress {
-  width: 100%;
-  height: 8px;
-}
-
-.videos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
-}
-
 figure {
+  flex: 1;
+  min-width: 280px;
   margin: 0;
-}
-
-figcaption {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 6px;
 }
 
 video {
   width: 100%;
-  border-radius: 8px;
   background: #000;
-}
-
-@media (max-width: 720px) {
-  .videos {
-    grid-template-columns: 1fr;
-  }
 }
